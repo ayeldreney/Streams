@@ -1,0 +1,68 @@
+
+<div *ngFor="let document of searchResult">
+
+  <div class="card text-dark mt-5 text-center " style=" margin-bottom: 20px">
+
+    <div class="card-body" style="padding:20px; background-color:#e5ecf26e;">
+      <h6 class="card-title">{{document.DocumentId}}</h6>
+      <div class="card-title" style="color:#ff3939">
+        {{document.Name}} Remaining  Seats
+      </div>
+      <div class="d-grid text-center g-2">
+        <div class="row">
+          <div class="col">
+            <div class="col m-3">
+              <i class="text-primary fas fa-plane-departure" style="font-size:20px"></i>
+            </div>
+            <div class="col">
+              <i class="fa-sharp fa-solid fa-location-dot">
+                {{document.CreatedDate}}
+              </i>
+            </div>
+            <div class="col m-2">
+
+              <i class="fa-regular"></i>
+              {{document.Priority}}
+            </div>
+            <div class="col">
+              <i class="fa-regular fa-clock"></i>
+              {{document.Due_date}}
+
+            </div>
+
+
+
+
+
+          </div>
+          <div class="col">
+            <div style="display:flex">
+              <i class="fa-solid fa-circle" style="margin-top:50px; font-size:9px"></i>
+              <hr style="display:block; width:100%; margin-top:55px" />
+              <i class="fa-solid fa-plane" style="margin-top:48px"></i>
+
+
+            </div>
+          
+            <br />
+            <a [routerLink]="['/edit-document',document.id]" class="btn btn-secondary btn-lg mt-2">
+              <i class="fa-solid fa-ticket"></i>
+              Edit
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
+

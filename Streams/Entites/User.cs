@@ -1,9 +1,15 @@
-﻿namespace Streams.Entites
+﻿
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Streams.Entites
 {
 	public class User
 	{
-		public int Id { get; set; }	
-		public string Name { get; set; } = string.Empty;
+
+		[Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		public int UserId { get; set; }	
+		public string UserName { get; set; } = string.Empty;
 
 		public string Email { get; set; } = string.Empty;
 

@@ -1,9 +1,12 @@
-﻿namespace Streams.Entites
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Streams.Entites
 {
 	public class Document
 	{
-
-		public int Id { get; set; }
+		[Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		public int DocumentId { get; set; }
 
 		public string Name { get; set; } = string.Empty;	
 
